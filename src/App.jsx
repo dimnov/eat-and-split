@@ -1,3 +1,4 @@
+import FormSplitBill from "./FormSplitBill.jsx";
 import Button from "./components/Button.jsx";
 import FormAddFriend from "./components/FormAddFriend.jsx";
 import FriendsList from "./components/FriendsList.jsx";
@@ -31,6 +32,8 @@ function App() {
     <FormAddFriend />
     <Button>Add friend</Button>
    </div>
+
+   <FormSplitBill />
   </div>
  );
 }
