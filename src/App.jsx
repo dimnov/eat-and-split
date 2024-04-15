@@ -1,3 +1,5 @@
+import Button from "./components/Button.jsx";
+import FormAddFriend from "./components/FormAddFriend.jsx";
 import FriendsList from "./components/FriendsList.jsx";
 
 const initialFriends = [
@@ -26,6 +28,8 @@ function App() {
   <div className="app">
    <div className="sidebar">
     <FriendsList initialFriends={initialFriends} />
+    <FormAddFriend />
+    <Button>Add friend</Button>
    </div>
   </div>
  );
