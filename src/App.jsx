@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FormSplitBill from "./FormSplitBill.jsx";
+import FormSplitBill from "./components/FormSplitBill.jsx";
 import Button from "./components/Button.jsx";
 import FormAddFriend from "./components/FormAddFriend.jsx";
 import FriendsList from "./components/FriendsList.jsx";
