@@ -28,6 +28,7 @@ const initialFriends = [
 function App() {
  const [showAddFriend, setShowAddFriend] = useState(false);
  const [friends, setFriends] = useState(initialFriends);
+ const [selectedFriend, setSelectedFriend] = useState(null);
 
  function handleShowAddFriend() {
   setShowAddFriend((show) => !show);
@@ -42,10 +43,21 @@ function App() {
   setShowAddFriend(false);
  }
 
+ function handleSelectFriend(friend) {
+  setSelectedFriend((selected) =>
+   selected?.id === friend?.id ? null : friend
+  );
+  setShowAddFriend(false);
+ }
+
  return (
   <div className="app">
    <div className="sidebar">
-    <FriendsList friends={friends} />
+    <FriendsList
+     friends={friends}
+     selectedFriend={selectedFriend}
+     handleSelectFriend={handleSelectFriend}
+    />
     {showAddFriend && (
      <FormAddFriend
       onClick={handleShowAddFriend}
@@ -57,7 +69,7 @@ function App() {
     </Button>
    </div>
 
-   <FormSplitBill />
+   {selectedFriend && <FormSplitBill name={selectedFriend.name} />}
   </div>
  );
 }
