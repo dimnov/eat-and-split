@@ -17,7 +17,7 @@ function FormAddFriend({ onAddFriend }) {
   const newFriend = {
    id,
    name,
-   image: `${image}?=${id}`,
+   image: `${image}?u=${id}`,
    balance: 0,
   };
 
